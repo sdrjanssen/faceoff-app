@@ -1,0 +1,238 @@
+/* TeamFinder.css */
+.team-finder-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.team-finder-title,
+.results-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.team-finder-description,
+.results-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Question Card */
+.question-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Stepper */
+.stepper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.step {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    background-color: #0077C0;
+    transform: scale(1.2);
+}
+
+.step.completed {
+    background-color: #0077C0;
+}
+
+/* Question Content */
+.question-content {
+    margin-bottom: 2rem;
+}
+
+.question-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Answer Options */
+.answer-options {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.answer-option {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.answer-option:hover {
+    border-color: #0077C0;
+    background-color: #f0f7ff;
+}
+
+.answer-option.selected {
+    background-color: #0077C0;
+    color: white;
+    border-color: #0077C0;
+}
+
+/* Question Actions */
+.question-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loading Screen */
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.loading-title {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.loading-description {
+    color: #666;
+    max-width: 600px;
+}
+
+/* Results */
+.results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.match-percentage {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #0077C0;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.team-card-header {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-logo {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.team-card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.team-name {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.team-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.team-players-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.team-players-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-player-item {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.team-card-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.reset-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}

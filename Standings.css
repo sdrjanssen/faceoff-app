@@ -1,0 +1,257 @@
+/* Standings.css */
+.standings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.standings-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Tabs */
+.standings-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.tab-button:hover {
+    color: #0077C0;
+}
+
+.tab-button.active {
+    color: #0077C0;
+}
+
+.tab-button.active::after {
+    background-color: #0077C0;
+}
+
+/* Alert */
+.alert {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.alert::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.75rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-info::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230c5460' viewBox='0 0 24 24'%3E%3Cpath d='M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E");
+}
+
+/* Conference Sections */
+.conference-section {
+    margin-bottom: 3rem;
+}
+
+.conference-title {
+    font-size: 1.5rem;
+    color: #0077C0;
+    margin-bottom: 1rem;
+}
+
+/* Tables */
+.standings-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.standings-table th,
+.standings-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.standings-table th {
+    background-color: #0077C0;
+    color: white;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+
+.standings-table tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Verwijder het hover effect van tabelrijen */
+.standings-table tr:hover {
+    background-color: inherit !important;
+}
+
+/* Als je MUI gebruikt, overschrijf ook deze classes */
+.MuiTableRow-hover:hover {
+    background-color: inherit !important;
+}
+
+.MuiTableRow-root:hover {
+    background-color: transparent !important;
+}
+
+.standings-table th:first-child,
+.standings-table td:first-child {
+    padding-left: 1.5rem;
+}
+
+.standings-table th:last-child,
+.standings-table td:last-child {
+    padding-right: 1.5rem;
+}
+
+.team-cell {
+    display: flex;
+    align-items: center;
+}
+
+.team-logo {
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.points-cell {
+    font-weight: bold;
+}
+
+/* Stats Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.stats-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.stats-card-title {
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.stats-table th {
+    font-weight: 500;
+    color: #555;
+}
+
+.stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+.team-stats-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-stats-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.team-stats-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Loading */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 119, 192, 0.2);
+    border-radius: 50%;
+    border-top-color: #0077C0;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
